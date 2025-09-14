@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Student Application Form</title>
+  <meta charset="UTF-8">
+  <link rel="stylesheet" href="lab-style.css">
+  <style>
+    body {
+      font-family: 'Merriweather', serif;
+      background-color: #f5f3f0; /* soft off-white */
+      color: #3b3a36;
+      padding: 30px;
+      line-height: 1.6;
+    }
+
+    h2 {
+      text-align: center;
+      color: #8b3e2f; /* muted brick red */
+      font-style: italic;
+      font-size: 2em;
+      margin-bottom: 25px;
+    }
+
+    form {
+      max-width: 600px;
+      margin: 0 auto 40px auto;
+      background: #ffffff;
+      padding: 25px;
+      border-radius: 12px;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    }
+
+    label {
+      display: block;
+      margin-top: 15px;
+      font-weight: bold;
+    }
+
+    input[type="text"],
+    input[type="file"],
+    select,
+    textarea {
+      width: 100%;
+      padding: 10px;
+      margin-top: 6px;
+      border: 1px solid #ccc;
+      border-radius: 6px;
+      font-size: 14px;
+      font-family: 'Merriweather', serif;
+    }
+
+    textarea {
+      resize: none;
+    }
+
+    input[type="submit"],
+    .back-btn {
+      display: inline-block;
+      background-color: #c77d52; /* burnt orange */
+      color: #fff;
+      border: none;
+      padding: 12px 20px;
+      margin-top: 20px;
+      width: 100%;
+      border-radius: 8px;
+      font-size: 16px;
+      cursor: pointer;
+      font-family: 'Merriweather', serif;
+      transition: 0.3s;
+      text-align: center;
+    }
+
+    input[type="submit"]:hover,
+    .back-btn:hover {
+      background-color: #8b3e2f; /* muted brick red */
+    }
+
+    .back-btn {
+      margin-bottom: 30px;
+    }
+  </style>
+</head>
+<body>
+
+<!-- Back Button -->
+<button class="back-btn" onclick="window.opener.showLabsPanel(); window.close()">← Back</button>
+
+<h2>Student Application Form</h2>
+
+<form onsubmit="return validateForm()">
+  <label for="name">Full Name:</label>
+  <input type="text" id="name">
+
+  <label for="email">Email:</label>
+  <input type="text" id="email">
+
+  <label for="phone">Phone Number:</label>
+  <input type="text" id="phone">
+
+  <label for="course">Course:</label>
+  <input type="text" id="course">
+
+  <label for="year">Year of Study:</label>
+  <select id="year">
+    <option value="">--Select--</option>
+    <option value="1">1st Year</option>
+    <option value="2">2nd Year</option>
+    <option value="3">3rd Year</option>
+  </select>
+
+  <label for="markscard">Upload Marks Card:</label>
+  <input type="file" id="markscard" accept=".pdf,.jpg,.jpeg,.png">
+
+  <label for="message">Why should we select you?</label>
+  <textarea id="message" rows="4"></textarea>
+
+  <input type="submit" value="Submit Application">
+</form>
+
+<script>
+function validateForm() {
+  let name = document.getElementById("name").value;
+  let email = document.getElementById("email").value;
+  let phone = document.getElementById("phone").value;
+  let course = document.getElementById("course").value;
+  let year = document.getElementById("year").value;
+  let markscard = document.getElementById("markscard").value;
+  let message = document.getElementById("message").value;
+
+  if (!/^[A-Za-z\s]+$/.test(name) || name.length < 3) {
+    alert("Enter a valid Name (only letters, min 3 characters).");
+    return false;
+  }
+
+  if (!/^\S+@\S+\.\S+$/.test(email)) {
+    alert("Enter a valid Email address.");
+    return false;
+  }
+
+  if (!/^\d{10}$/.test(phone)) {
+    alert("Phone Number must be exactly 10 digits.");
+    return false;
+  }
+
+  if (course.length < 2) {
+    alert("Course name should be at least 2 characters.");
+    return false;
+  }
+
+  if (year === "") {
+    alert("Please select your Year of Study.");
+    return false;
+  }
+
+  if (markscard === "") {
+    alert("Please upload your Marks Card.");
+    return false;
+  }
+
+  if (message.length < 10) {
+    alert("Message should be at least 10 characters long.");
+    return false;
+  }
+
+  alert("Application Submitted Successfully ✅");
+  return false; // prevent submission for demo
+}
+</script>
+
+</body>
+</html>
+

@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Lab 7 - CSS Demonstration</title>
+  <link rel="stylesheet" href="lab-style.css"> <!-- External CSS -->
+
+  <!-- Internal CSS -->
+  <style>
+    body {
+      background-color: #f7f5f2; /* soft beige */
+      font-family: 'Merriweather', serif;
+      color: #3b3a36;
+      padding: 30px;
+      line-height: 1.6;
+    }
+
+    h1, h2 {
+      text-align: center;
+      margin-bottom: 20px;
+      font-style: italic;
+    }
+
+    h1 {
+      color: #8b3e2f; /* muted brick red */
+    }
+
+    h2 {
+      color: #6d6875; /* muted purple */
+    }
+
+    p.internal {
+      background-color: #f3d2c1; /* soft coral highlight */
+      padding: 12px;
+      border-radius: 10px;
+      font-style: italic;
+      max-width: 700px;
+      margin: 15px auto;
+    }
+
+    .back-btn {
+      display: inline-block;
+      margin-bottom: 20px;
+      padding: 8px 12px;
+      background-color: #c77d52; /* burnt orange */
+      color: #fff;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      font-weight: bold;
+    }
+
+    .back-btn:hover {
+      background-color: #8b3e2f;
+    }
+  </style>
+</head>
+<body>
+
+<!-- Back Button -->
+<button class="back-btn" onclick="window.opener.showLabsPanel(); window.close()">← Back</button>
+
+<h1>CSS Types Demonstration</h1>
+
+<!-- External CSS Example -->
+<h2>External CSS</h2>
+<p>
+  This paragraph is styled using the <strong>external stylesheet</strong> 
+  (<code>lab-style.css</code>).  
+  The fonts, margins, and some background effects are controlled from there.
+</p>
+
+<!-- Internal CSS Example -->
+<h2>Internal CSS</h2>
+<p class="internal">
+  This paragraph is styled using <strong>internal CSS</strong> defined 
+  in the <code>&lt;style&gt;</code> section inside the head.  
+  Notice the italic font and highlighted background.
+</p>
+
+<!-- Inline CSS Example -->
+<h2>Inline CSS</h2>
+<p style="color:#a65d35; font-weight:bold; border:2px dashed #c77d52; padding:10px; border-radius:10px; max-width:700px; margin:15px auto;">
+  This text is styled using <strong>inline CSS</strong> directly in the 
+  <code>style</code> attribute of the tag.  
+  The color, border, and padding are applied only to this element.
+</p>
+
+</body>
+</html>

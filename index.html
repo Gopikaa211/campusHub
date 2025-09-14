@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Campus Hub</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+    <!-- Sidebar -->
+    <aside class="sidebar">
+      <h2>🎓 Campus Hub</h2>
+      <button id="toggleBtn">🌙</button>
+      <nav>
+        <ul>
+          <li data-target="welcome">Welcome</li>
+          <li data-target="todo">📝 To-Do List</li>
+          <li data-target="study">🎲 Study Break</li>
+          <li data-target="mood">😊 Mood Picker</li>
+          <li data-target="compliment">💬 Compliment Board</li>
+          <li data-target="labs">💻 Lab Programs</li>
+          <li data-target="discount">🛒 Discount Calculator</li>
+        </ul>
+      </nav>
+    </aside>
+
+    <!-- Main Panel -->
+    <main class="content">
+      <!-- Welcome -->
+      <!-- Welcome -->
+<section id="welcome" class="panel active">
+  <div class="header">
+    <h1>Welcome to Campus Hub</h1>
+    <p>Your student-friendly portal for lab programs, projects, and interactive tools!</p>
+  </div>
+  <div class="content">
+    <!-- Intro Card -->
+    <div class="card">
+      <h2>Explore Campus Hub</h2>
+      <p>
+        Use the sidebar to access lab programs, practice exercises, and our React JS discount calculator project. 
+        Everything is organized neatly in one interactive hub.
+      </p>
+      <img src="https://i.pinimg.com/736x/a5/bf/20/a5bf207f9c469d139985b286bf330199.jpg" alt="Campus Hub" 
+      style="display:block; margin:20px auto; max-width:450px; width:70%; height:auto; border-radius:10px; box-shadow:0 4px 12px rgba(0,0,0,0.1);">
+    </div>
+
+    <!-- Blog Style Section -->
+    <div class="card">
+      <h2>Why Campus Hub?</h2>
+      <div>
+        <p>
+        Being a student isn’t easy — classes, assignments, labs, and deadlines can pile up fast. That’s why we built 
+        <strong>Campus Hub</strong>: a simple but powerful space to stay organized, motivated, and balanced. Think of 
+        it as your friendly little productivity corner.
+       </p>
+      <img src="https://i.pinimg.com/1200x/b8/16/de/b816de85f096d764074be0b79c879826.jpg" alt="student life" 
+    style="display:block; margin:20px auto; max-width:220px; width:40%; height:auto; border-radius:10px; box-shadow:0 4px 12px rgba(0,0,0,0.1);">
+      </div>
+       
+    <div>
+      <p>
+        ✨ The <strong>To-Do List</strong> helps you keep track of your tasks without the stress of remembering 
+        everything in your head. And let’s be honest — nothing feels better than ticking something off a list.
+      </p>
+      <img src="https://i.pinimg.com/736x/ae/3c/e6/ae3ce6900af97c65469efacd0257981b.jpg" alt="todo list" 
+      style="display:block; margin:20px auto; max-width:220px; width:40%; height:auto; border-radius:10px; box-shadow:0 4px 12px rgba(0,0,0,0.1);">
+    </div>
+       
+    <div>
+      <p>
+        🌿 The <strong>Mood Picker</strong> is like a quick check-in with yourself. Whether you’re feeling hyped, 
+        stressed, sleepy, or just “meh,” it gives you a thoughtful nudge to take care of your mental space. 
+        Sometimes all you need is a reminder to breathe.
+      </p>
+      <img src="https://i.pinimg.com/736x/db/31/29/db3129c8c7b14a712bc67c1143f18a6e.jpg" alt="mood picker" 
+      style="display:block; margin:20px auto; max-width:220px; width:40%; height:auto; border-radius:10px; box-shadow:0 4px 12px rgba(0,0,0,0.1);">
+    </div>
+      
+    <div>
+      <p>
+        🌟 The <strong>Compliment Board</strong> is pure positivity. On the days you’re doubting yourself, 
+        it throws you a little boost — a reminder that you’re capable, hardworking, and worth way more 
+        than you give yourself credit for.
+      </p>
+      <img src="https://i.pinimg.com/736x/2b/57/76/2b57762aef1e3fbf9ffb9d69c99537a5.jpg" alt="compliment" 
+      style="display:block; margin:20px auto; max-width:220px; width:40%; height:auto; border-radius:10px; box-shadow:0 4px 12px rgba(0,0,0,0.1);">
+    </div>
+     
+    <div>
+       <p>
+        ⏸️ And because non-stop studying doesn’t actually help anyone, our <strong>Study Break Ideas</strong> 
+        give you small, healthy ways to recharge — stretch, grab a snack, listen to a song, or just breathe. 
+        Breaks aren’t distractions; they’re part of the process.
+      </p>
+      <img src="https://i.pinimg.com/1200x/f0/73/bc/f073bca969244dcddcba5f22dfea1eba.jpg" alt="break" 
+      style="display:block; margin:20px auto; max-width:220px; width:40%; height:auto; border-radius:10px; box-shadow:0 4px 12px rgba(0,0,0,0.1);">
+    </div>
+      
+    <div>
+        <p>
+        With Campus Hub, you’re not just staying on top of work — you’re building habits that keep you motivated 
+        and balanced. It’s here to remind you that progress isn’t about being perfect, it’s about showing up, 
+        one step at a time. And you’re already doing that.
+      </p>
+    </div>
+  </div>
+</section>
+
+
+      <!-- To-Do -->
+      <section id="todo" class="panel">
+        <div class="card">
+          <h2>📝 To-Do List</h2>
+          <input type="text" id="taskInput" placeholder="Add a task...">
+          <button onclick="addTask()">Add</button>
+          <ul id="taskList"></ul>
+        </div>
+      </section>
+
+      <!-- Study Break -->
+      <section id="study" class="panel">
+        <div class="card">
+          <h2>🎲 Study Break</h2>
+          <button onclick="randomActivity()">Get a Fun Activity</button>
+          <p id="activityResult"></p>
+        </div>
+      </section>
+
+      <!-- Mood Picker -->
+      <section id="mood" class="panel">
+        <div class="card">
+          <h2>😊 Mood Picker</h2>
+          <select id="moodSelect" onchange="pickMood()">
+            <option value="">Select mood...</option>
+            <option>Happy</option>
+            <option>Awful</option>
+            <option>Calm</option>
+            <option>Anxious</option>
+            <option>Energetic</option>
+            <option>Confused</option>
+            <option>Stressed</option>
+            <option>Motivated</option>
+            <option>Sleepy</option>
+          </select>
+          <p id="moodMessage"></p>
+        </div>
+      </section>
+
+      <!-- Compliment Board -->
+      <section id="compliment" class="panel">
+        <div class="card">
+          <h2>💬 Compliment Board</h2>
+          <button onclick="giveCompliment()">Get a Compliment</button>
+          <p id="complimentText"></p>
+        </div>
+      </section>
+
+      <!-- Lab Programs -->
+      <section id="labs" class="panel">
+        <div class="card">
+          <h2>💻 Lab Programs</h2>
+          <select id="labSelect" onchange="openLab()">
+            <option value="">Select a Program...</option>
+            <option value="labs/profilePage.html">Profile Page</option>
+            <option value="labs/timeTable.html">Time Table</option>
+            <option value="labs/reservationForm.html">Reservation Form</option>
+            <option value="labs/applicationForm.html">Application Form</option>
+            <option value="labs/cssFormatting.html">CSS Formatting</option>
+            <option value="labs/cssTypes.html">CSS Types</option>
+            <option value="labs/leapYear.html">Leap Year</option>
+            <option value="labs/tempConverter.html">Temp Converter</option>
+            <option value="labs/regValid.html">Registration Validation</option>
+          </select>
+        </div>
+      </section>
+
+      <!-- Discount Calculator -->
+      <section id="discount" class="panel">
+        <div class="card">
+          <h2>🛒 Discount Calculator</h2>
+          <iframe src="https://bill-discount-calculator.vercel.app/" width="100%" height="500px" frameborder="0"></iframe>
+        </div>
+      </section>
+    </main>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>

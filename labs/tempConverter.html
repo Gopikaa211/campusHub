@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Lab 9 - Temperature Converter</title>
+<link rel="stylesheet" href="lab-style.css">
+<style>
+body { 
+    background:#f0ebe3; 
+    font-family:'Merriweather', serif; 
+    color:#3b3a36; 
+    padding:30px; 
+}
+
+h1 { 
+    text-align:center; 
+    font-style:italic; 
+    color:#6d6875; 
+    margin-bottom:25px;
+}
+
+input, select { 
+    padding:8px; 
+    margin:8px 0; 
+    border-radius:6px; 
+    border:1px solid #ccc; 
+    width:220px; 
+    display:block; 
+}
+
+/* Buttons / Links */
+button, .back-btn {
+    background-color: #c77d52; /* muted burnt orange */
+    color: #fff8f0;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 12px;
+    cursor: pointer;
+    font-style: italic;
+    font-weight: bold;
+    transition: all 0.25s ease-in-out;
+    margin-top: 10px;
+    box-shadow: 0 3px 8px rgba(0,0,0,0.08);
+}
+
+button:hover, .back-btn:hover {
+    background-color: #a65d35; /* slightly darker burnt orange */
+    transform: translateY(-2px);
+}
+
+#result { 
+    margin-top:15px; 
+    font-weight:bold; 
+    color:#c77d52; 
+}
+</style>
+<script>
+function convertTemp() {
+    const temp = parseFloat(document.getElementById("temp").value);
+    const type = document.getElementById("type").value;
+    if(isNaN(temp)){ alert("Enter a number!"); return; }
+    let result;
+    if(type==="CtoF"){ 
+        result = (temp*9/5+32).toFixed(2)+" °F"; 
+    } else { 
+        result = ((temp-32)*5/9).toFixed(2)+" °C"; 
+    }
+    document.getElementById("result").innerText = result;
+}
+</script>
+</head>
+<body>
+
+<button class="back-btn" onclick="window.opener.showLabsPanel(); window.close()">← Back</button>
+
+<h1>Temperature Converter</h1>
+<input type="number" id="temp" placeholder="Enter Temperature">
+<select id="type">
+    <option value="CtoF">Celsius to Fahrenheit</option>
+    <option value="FtoC">Fahrenheit to Celsius</option>
+</select>
+<button onclick="convertTemp()">Convert</button>
+
+<div id="result"></div>
+
+</body>
+</html>

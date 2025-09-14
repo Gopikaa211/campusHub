@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>BCA Semester III – Class Time Table</title>
+  <link rel="stylesheet" href="lab-style.css">
+  <style>
+    body {
+      font-family: 'Merriweather', serif;
+      background-color: #f5f3f0; /* soft off-white */
+      color: #3b3a36;
+      padding: 30px;
+      line-height: 1.6;
+    }
+
+    h1 {
+      text-align: center;
+      color: #8b3e2f; /* muted brick red */
+      font-size: 2.5em;
+      font-style: italic;
+      margin-bottom: 20px;
+    }
+
+    table {
+      width: 90%;
+      margin: 20px auto;
+      border-collapse: collapse;
+      background: #ffffff;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+      border-radius: 12px;
+      overflow: hidden;
+    }
+
+    th, td {
+      border: 1px solid #ddd;
+      padding: 10px;
+      text-align: center;
+    }
+
+    th {
+      background-color: #c77d52; /* burnt orange */
+      color: #fff;
+      font-style: italic;
+    }
+
+    td.lunch {
+      background-color: #d3e0ea;
+      font-weight: bold;
+    }
+
+    td.lab {
+      background-color: #fbe6e0; /* soft peachy */
+      font-weight: bold;
+    }
+
+    .back-btn {
+      display: inline-block;
+      margin-bottom: 20px;
+      padding: 8px 12px;
+      background-color: #c77d52;
+      color: #fff;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      font-weight: bold;
+      font-style: normal;
+    }
+
+    .back-btn:hover {
+      background-color: #8b3e2f;
+    }
+  </style>
+</head>
+<body>
+
+<!-- Back Button -->
+<button class="back-btn" onclick="window.opener.showLabsPanel(); window.close()">← Back</button>
+
+<h1>BCA Semester III – Class Time Table</h1>
+
+<table>
+  <tr>
+    <th>DAY/ TIME</th>
+    <th>7:00 - 7:50</th>
+    <th>7:55 - 8:45</th>
+    <th>9:15 - 10:05</th>
+    <th>10:10 - 11:00</th>
+    <th>11:05 - 11:55</th>
+    <th>12:00 - 12:50</th>
+    <th>12:50 - 1:50</th>
+    <th>1:50 - 2:40</th>
+    <th>2:45 - 3:35</th>
+    <th>3:40 - 4:30</th>
+  </tr>
+  <tr>
+    <td>MON</td>
+    <td></td>
+    <td></td>
+    <td>Lang <br> (G/T/SK/IK)</td>
+    <td></td>
+    <td></td>
+    <td>GE</td>
+    <td class="lunch" rowspan="6">L<br>U<br>N<br>C<br>H</td>
+    <td class="lab" colspan="2">DBMS LAB <br>B1, L3, PR, NI <br>B2, L2, PO, NF</td>
+    <td></td>
+  </tr>
+  <tr>
+    <td>TUE</td>
+    <td></td>
+    <td></td>
+    <td>Lang <br> (G/T/SK/IK)</td>
+    <td></td>
+    <td>DBMS - PR</td>
+    <td>GE</td>
+    <td>DBMS - PR</td>
+    <td>AI - MR</td>
+    <td>COA - SR</td>
+  </tr>
+  <tr>
+    <td>WED</td>
+    <td></td>
+    <td></td>
+    <td>Lang <br> (G/T/SK/JK)</td>
+    <td></td>
+    <td>MDC</td>
+    <td>GE</td>
+    <td>COA - SR</td>
+    <td>DBMS - PR</td>
+    <td>WEB - AS</td>
+  </tr>
+  <tr>
+    <td>THU</td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td>COA - SR</td>
+    <td>WEB - AS</td>
+    <td>Lang <br> (AE/K/H/IK)</td>
+    <td>COA - SR</td>
+    <td>AI - MR</td>
+    <td></td>
+  </tr>
+  <tr>
+    <td>FRI</td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td>WEB - AS</td>
+    <td>MDC</td>
+    <td>Lang <br> (AE/K/H/IK)</td>
+    <td class="lab" colspan="2">WEB LAB <br>B1, L1, SY, PS <br>B2, L2, SR, AS</td>
+    <td></td>
+  </tr>
+  <tr>
+    <td>SAT</td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td>Library</td>
+    <td>AI - MR</td>
+    <td>Lang <br> (AE/K/H/IK)</td>
+    <td></td>
+    <td></td>
+    <td></td>
+  </tr>
+</table>
+
+</body>
+</html>
