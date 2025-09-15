@@ -2,134 +2,77 @@
 body {
     font-family: 'Merriweather', serif;
     margin: 0;
-    padding: 0;
-    background-color: #f5f3f0; /* soft off-white */
+    padding: 30px;
+    background-color: #f7f5f2; /* soft beige/off-white */
     color: #3b3a36;
     line-height: 1.6;
+    text-align: center; /* center headings and inline text by default */
 }
 
-/* Sidebar */
-.sidebar {
-    height: 100vh;
-    width: 250px;
-    position: fixed;
-    top: 0;
-    left: 0;
-    background-color: #fffaf5; /* soft cream */
-    padding-top: 30px;
-    box-shadow: 3px 0 15px rgba(0,0,0,0.08);
-}
-
-.sidebar h2 {
-    text-align: center;
-    font-family: 'Playfair Display', serif;
+/* Headings */
+h1, h2, h3, h4 {
     font-style: italic;
+    margin-bottom: 20px;
+}
+
+h1 {
     color: #8b3e2f; /* muted brick red */
-    margin-bottom: 25px;
-    font-size: 1.8em;
-}
-
-.sidebar a {
-    display: block;
-    padding: 12px 20px;
-    margin: 10px;
-    background-color: #f0d9d0; /* dusty rose */
-    color: #3b3a36;
-    border-radius: 12px;
-    font-weight: 600;
-    text-decoration: none;
-    box-shadow: 0 2px 5px rgba(0,0,0,0.05);
-    transition: all 0.25s ease-in-out;
-    font-style: italic;
-}
-
-.sidebar a:hover {
-    background-color: #e6b8a2; /* muted coral */
-    transform: translateY(-2px);
-}
-
-/* Main Panel */
-.main-panel {
-    margin-left: 270px;
-    padding: 40px;
-}
-
-/* Header */
-.header {
-    padding: 30px 20px;
-    text-align: center;
-    background-color: #d6a77a; /* muted but warm terracotta */
-    border-radius: 20px;
-    box-shadow: 0 4px 15px rgba(0,0,0,0.08);
-    margin-bottom: 30px;
-}
-
-.header h1 {
-    font-family: 'Playfair Display', serif;
     font-size: 2.5em;
-    color: #5a3921; /* deep brown */
-    font-style: italic;
-    margin-bottom: 10px;
 }
 
-.header p {
-    font-size: 1.1em;
-    color: #4a3f35;
+h2 {
+    color: #6d6875; /* muted purple */
 }
 
-/* Content Cards */
-.content {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
-    gap: 25px;
+h3 {
+    color: #e6b8a2; /* muted coral */
 }
 
-.content .card {
-    background-color: #fbe6e0; /* soft peachy pink */
-    padding: 25px;
-    border-radius: 20px;
-    box-shadow: 0 5px 15px rgba(0,0,0,0.06);
-    transition: transform 0.2s ease, box-shadow 0.2s ease;
+h4 {
+    color: #7d5a50; /* earthy terracotta */
 }
 
-.content .card:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 8px 25px rgba(0,0,0,0.1);
+/* Paragraphs */
+p {
+    max-width: 700px;
+    margin: 15px auto; /* center content */
+    padding: 12px;
+    border-radius: 10px;
+    text-align: justify; /* optional: looks neat for multiple lines */
 }
 
-.content img {
-    width: 100%;
-    border-radius: 15px;
-    margin-bottom: 15px;
-}
-
-/* Footer */
-.footer {
-    background-color: #b88b5f; /* warm earthy bronze */
-    color: #fff8f0;
-    padding: 20px;
-    text-align: center;
-    border-radius: 20px 20px 0 0;
-    font-weight: 600;
+/* Highlighted Paragraph (like internal CSS example) */
+p.internal {
+    background-color: #f3d2c1; /* soft coral highlight */
     font-style: italic;
 }
 
-/* Buttons / Links */
-a.button {
+/* Links / Buttons */
+a, a.button {
     display: inline-block;
-    padding: 12px 24px;
-    background-color: #c77d52; /* muted burnt orange */
+    padding: 10px 20px;
+    margin: 10px 0;
+    background-color: #c77d52; /* burnt orange */
     color: #fff8f0;
     border-radius: 12px;
+    font-style: italic;
     font-weight: bold;
     text-decoration: none;
-    margin-top: 10px;
-    box-shadow: 0 3px 8px rgba(0,0,0,0.08);
-    font-style: italic;
     transition: all 0.25s ease-in-out;
 }
 
-a.button:hover {
-    background-color: #a65d35; /* slightly darker burnt orange */
+a:hover, a.button:hover {
+    background-color: #a65d35;
     transform: translateY(-2px);
+}
+
+/* Utility Classes for Cards or Sections */
+.card {
+    background-color: #fbe6e0; /* soft peachy pink */
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+    margin: 20px auto;
+    max-width: 700px;
+    text-align: left; /* inner content aligned left for readability */
 }
