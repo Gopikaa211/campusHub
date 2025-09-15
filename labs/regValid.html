@@ -29,7 +29,7 @@ input, select {
 }
 
 /* Unified Button Styling */
-button, input[type="submit"] {
+input[type="submit"] {
     background-color: #c77d52; /* burnt orange */
     color: #fff8f0;
     font-weight: bold;
@@ -43,7 +43,7 @@ button, input[type="submit"] {
     box-shadow: 0 3px 8px rgba(0,0,0,0.08);
 }
 
-button:hover, input[type="submit"]:hover {
+input[type="submit"]:hover {
     background-color: #a65d35; /* darker burnt orange */
     transform: translateY(-2px);
 }
@@ -69,8 +69,6 @@ function validateRegistration() {
 </script>
 </head>
 <body>
-
-<button class="back-btn" onclick="window.opener.showLabsPanel(); window.close()">← Back</button>
 
 <h1>Registration Page</h1>
 <form onsubmit="return validateRegistration()">

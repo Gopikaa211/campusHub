@@ -32,24 +32,6 @@
       font-weight: bold;
       color: #c77d52;
     }
-
-    .back-btn {
-      display: inline-block;
-      padding: 8px 16px;
-      margin-bottom: 20px;
-      border-radius: 8px;
-      background: #6d6875;
-      color: white;
-      border: none;
-      cursor: pointer;
-      font-style: italic;
-      transition: 0.25s;
-    }
-
-    .back-btn:hover {
-      background: #b5838d;
-      transform: translateY(-2px);
-    }
   </style>
   <script>
     function checkLeapYear() {
@@ -72,8 +54,6 @@
 </head>
 <body>
 
-  <button class="back-btn" onclick="window.opener.showLabsPanel(); window.close()">← Back</button>
-
   <h1>Leap Year Checker</h1>
 
   <input type="number" id="year" placeholder="Enter year">
@@ -83,4 +63,3 @@
 
 </body>
 </html>
-

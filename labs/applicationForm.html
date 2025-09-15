@@ -53,8 +53,7 @@
       resize: none;
     }
 
-    input[type="submit"],
-    .back-btn {
+    input[type="submit"] {
       display: inline-block;
       background-color: #c77d52; /* burnt orange */
       color: #fff;
@@ -70,20 +69,12 @@
       text-align: center;
     }
 
-    input[type="submit"]:hover,
-    .back-btn:hover {
+    input[type="submit"]:hover {
       background-color: #8b3e2f; /* muted brick red */
-    }
-
-    .back-btn {
-      margin-bottom: 30px;
     }
   </style>
 </head>
 <body>
-
-<!-- Back Button -->
-<button class="back-btn" onclick="window.opener.showLabsPanel(); window.close()">← Back</button>
 
 <h2>Student Application Form</h2>
 
@@ -169,4 +160,3 @@ function validateForm() {
 
 </body>
 </html>
-
